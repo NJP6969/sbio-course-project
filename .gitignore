@@ -1,0 +1,31 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter checkpoints and outputs
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Virtual envs
+venv/
+env/
+.venv/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Data / large files
+data/
+results/
+*.h5
+*.npz
+
+# Ignore environment / dependency lockfiles that might be local
+pip-wheel-metadata/
+
+# Git LFS placeholder (if you plan to use)
+# *.ipynb filter=lfs diff=lfs merge=lfs -text
