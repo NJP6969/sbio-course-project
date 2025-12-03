@@ -188,6 +188,11 @@ def memristive_fhn_map(state, params):
     k1 = params['k1']
     k2 = params['k2']
     
+    # Clamp values to prevent overflow (divergence detection)
+    MAX_VAL = 1e10
+    if abs(x) > MAX_VAL or abs(y) > MAX_VAL or abs(z) > MAX_VAL:
+        return np.array([np.nan, np.nan, np.nan])
+    
     # Membrane potential update
     x_next = x - (x**3)/3 - y + I_ext + k1 * z * x
     
